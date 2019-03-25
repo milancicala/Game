@@ -13,7 +13,7 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     HelmetMiddleware.configure({});
     consumer
-        .apply(HelmetMiddleware)
+        .apply(HelmetMiddleware, IpWhitelistMiddleware)
         .forRoutes('*');
   }
 }

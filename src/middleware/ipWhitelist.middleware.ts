@@ -42,7 +42,6 @@ export class IpWhitelistMiddleware implements NestMiddleware {
  * @param type
  *
  * @returns boolean
- * @author MC
  */
 async function isIPWhitelisted(clientIp, type) {
     try {
@@ -66,7 +65,6 @@ async function isIPWhitelisted(clientIp, type) {
  * @param req
  *
  * @returns String
- * @author MC
  */
 function getClientIP(req) {
     let clientIP = requestIP.getClientIp(req);
